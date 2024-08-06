@@ -285,6 +285,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-inline: auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .content {
@@ -488,14 +489,14 @@ p {
   flex: 1 0 46%;
   -o-object-fit: cover;
      object-fit: cover;
-  min-width: 296px;
+  min-width: 320px;
   border-radius: var(--border-radius);
 }
 @media screen and (max-width: 767px) {
   .article__image {
-    margin-left: -16px;
-    transform: scale(1.1);
-    transform-origin: top left;
+    margin-inline: -16px;
+    width: calc(100% + 32px);
+    max-width: none;
     border-radius: 0;
   }
 }
