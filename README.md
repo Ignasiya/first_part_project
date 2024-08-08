@@ -1,6 +1,8 @@
 # Практическая задача
 
-## [Ссылка на хостинг](https://ignasiya.github.io/first_part_project/)
+## [Задание 1.3](https://ignasiya.github.io/first_part_project/)
+
+## [Задание 1.4](https://ignasiya.github.io/first_part_project/sidebar.html)
 
 ### Сверстать блок из макета, выложить на Github и Github pages.
 
