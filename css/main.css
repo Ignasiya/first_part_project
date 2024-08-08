@@ -531,6 +531,11 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.circle-button--icon-glass-alt {
+  background-image: url("/img/icons/glass-alt.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .circle-button--icon-cross {
   background-image: url("/img/icons/cross.svg");
   background-repeat: no-repeat;
