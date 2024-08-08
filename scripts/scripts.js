@@ -12,3 +12,17 @@ elBtnCloseSidebar.addEventListener("click", () => {
   elSidebar.classList.toggle("sidebar--show");
   elShadingBackground.classList.toggle("shading-background--show");
 });
+
+elBtnOpenSidebar.addEventListener("keydown", (event) => {
+  if (event.key === " " || event.key === "Enter") {
+    event.preventDefault();
+    elBtnOpenSidebar.click();
+  }
+});
+
+elBtnCloseSidebar.addEventListener("keydown", (event) => {
+  if (event.key === " " || event.key === "Enter") {
+    event.preventDefault();
+    elBtnCloseSidebar.click();
+  }
+});

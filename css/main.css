@@ -186,6 +186,7 @@ svg * {
   --color-dot-active: #b5b6bc;
   --border-radius: 6px;
   --border-radius-large: 16px;
+  --container-width: 1440px;
   --background-linear: linear-gradient(
     270deg,
     rgb(248, 248, 248),
@@ -199,7 +200,6 @@ svg * {
 }
 
 .container {
-  margin-inline: auto;
   padding-inline: 16px;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -211,9 +211,6 @@ svg * {
   .container {
     padding-inline: 32px;
   }
-}
-.container--no-center {
-  margin-inline: 0;
 }
 
 .visually-hidden {
@@ -401,6 +398,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: var(--container-width);
   margin-inline: auto;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -410,7 +408,6 @@ p {
 }
 @media screen and (min-width: 1024px) {
   .content {
-    margin-left: 320px;
     gap: 50px;
   }
 }
@@ -434,8 +431,6 @@ p {
   border-bottom: 1px solid var(--color-ligthturquoise-alt);
   background-color: var(--color-white);
   position: relative;
-}
-.header__inner {
   display: flex;
   gap: 16px;
 }
@@ -492,27 +487,54 @@ p {
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--color-pink);
-  fill: var(--color-white);
   border: 1px solid transparent;
-}
-.circle-button__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 @media (hover: hover) {
   .circle-button:hover {
     border: 2px solid var(--color-ligthturquoise);
-    fill: var(--color-turquoise);
     cursor: pointer;
   }
 }
 @media (hover: none) {
   .circle-button:active {
     border: 2px solid var(--color-ligthturquoise);
-    fill: var(--color-turquoise);
     cursor: pointer;
   }
+}
+.circle-button--icon-burger {
+  background-image: url("/img/icons/burger.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.circle-button--icon-phone {
+  background-image: url("/img/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.circle-button--icon-messege {
+  background-image: url("/img/icons/messege.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.circle-button--icon-group {
+  background-image: url("/img/icons/group.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.circle-button--icon-wrench {
+  background-image: url("/img/icons/wrench.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.circle-button--icon-glass {
+  background-image: url("/img/icons/glass.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.circle-button--icon-cross {
+  background-image: url("/img/icons/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .button {
@@ -629,7 +651,8 @@ p {
   height: 30px;
 }
 .show-toggle__arrow {
-  fill: var(--color-turquoise);
+  width: 24px;
+  aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -640,6 +663,9 @@ p {
 }
 .show-toggle__action {
   color: inherit;
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -674,6 +700,11 @@ p {
   height: 2px;
   background-color: currentColor;
   transition-duration: 0.2s;
+}
+.show-toggle--icon-arrow {
+  background-image: url("/img/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .tab-button {
@@ -727,18 +758,25 @@ p {
 }
 
 .label-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   display: flex;
-  gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   align-items: center;
   z-index: 1;
 }
-.label-button__title {
+.label-button__text {
   display: none;
+  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  letter-spacing: -0.2px;
 }
 @media screen and (min-width: 1024px) {
-  .label-button__title {
+  .label-button__text {
     display: block;
   }
 }
@@ -750,11 +788,19 @@ p {
 @media (hover: hover) {
   .label-button:hover {
     cursor: pointer;
+    color: var(--color-darkgray);
+  }
+  .label-button:hover .label-button--hover {
+    border: 2px solid var(--color-ligthturquoise);
   }
 }
 @media (hover: none) {
   .label-button:active {
     cursor: pointer;
+    color: var(--color-darkgray);
+  }
+  .label-button:active .label-button--hover {
+    border: 2px solid var(--color-ligthturquoise);
   }
 }
 
