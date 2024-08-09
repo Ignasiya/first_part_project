@@ -502,42 +502,42 @@ p {
   }
 }
 .circle-button--icon-burger {
-  background-image: url("/img/icons/burger.svg");
+  background-image: url("img/icons/burger.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-phone {
-  background-image: url("/img/icons/phone.svg");
+  background-image: url("img/icons/phone.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-messege {
-  background-image: url("/img/icons/messege.svg");
+  background-image: url("img/icons/messege.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-group {
-  background-image: url("/img/icons/group.svg");
+  background-image: url("img/icons/group.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-wrench {
-  background-image: url("/img/icons/wrench.svg");
+  background-image: url("img/icons/wrench.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-glass {
-  background-image: url("/img/icons/glass.svg");
+  background-image: url("img/icons/glass.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-glass-alt {
-  background-image: url("/img/icons/glass-alt.svg");
+  background-image: url("img/icons/glass-alt.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-cross {
-  background-image: url("/img/icons/cross.svg");
+  background-image: url("img/icons/cross.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -707,7 +707,7 @@ p {
   transition-duration: 0.2s;
 }
 .show-toggle--icon-arrow {
-  background-image: url("/img/icons/arrow.svg");
+  background-image: url("img/icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
