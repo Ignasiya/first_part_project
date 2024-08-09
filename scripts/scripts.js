@@ -13,16 +13,16 @@ elBtnCloseSidebar.addEventListener("click", () => {
   elShadingBackground.classList.toggle("shading-background--show");
 });
 
-elBtnOpenSidebar.addEventListener("keydown", (event) => {
-  if (event.key === " " || event.key === "Enter") {
-    event.preventDefault();
-    elBtnOpenSidebar.click();
-  }
-});
+// elBtnOpenSidebar.addEventListener("keydown", (event) => {
+//   if (event.key === " " || event.key === "Enter") {
+//     event.preventDefault();
+//     elBtnOpenSidebar.click();
+//   }
+// });
 
-elBtnCloseSidebar.addEventListener("keydown", (event) => {
-  if (event.key === " " || event.key === "Enter") {
-    event.preventDefault();
-    elBtnCloseSidebar.click();
-  }
-});
+// elBtnCloseSidebar.addEventListener("keydown", (event) => {
+//   if (event.key === " " || event.key === "Enter") {
+//     event.preventDefault();
+//     elBtnCloseSidebar.click();
+//   }
+// });

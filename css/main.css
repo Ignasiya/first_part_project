@@ -202,7 +202,7 @@ svg * {
 .container {
   padding-inline: 16px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .container {
     padding-inline: 24px;
   }
@@ -227,7 +227,7 @@ svg * {
           clip-path: inset(100%) !important;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .hidden-tablet {
     display: none !important;
   }
@@ -401,7 +401,7 @@ p {
   max-width: var(--container-width);
   margin-inline: auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .content {
     gap: 32px;
   }
@@ -411,7 +411,7 @@ p {
     gap: 50px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .content__section--margin-top {
     margin-top: -8px;
   }
@@ -461,7 +461,7 @@ p {
 .page-menu--margin-left {
   margin-left: auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .page-menu--isborder-tablet:after {
     content: "";
     width: 2px;
@@ -502,42 +502,42 @@ p {
   }
 }
 .circle-button--icon-burger {
-  background-image: url("/img/icons/burger.svg");
+  background-image: url("../img/icons/burger.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-phone {
-  background-image: url("/img/icons/phone.svg");
+  background-image: url("../img/icons/phone.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-messege {
-  background-image: url("/img/icons/messege.svg");
+  background-image: url("../img/icons/messege.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-group {
-  background-image: url("/img/icons/group.svg");
+  background-image: url("../img/icons/group.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-wrench {
-  background-image: url("/img/icons/wrench.svg");
+  background-image: url("../img/icons/wrench.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-glass {
-  background-image: url("/img/icons/glass.svg");
+  background-image: url("../img/icons/glass.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-glass-alt {
-  background-image: url("/img/icons/glass-alt.svg");
+  background-image: url("../img/icons/glass-alt.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 .circle-button--icon-cross {
-  background-image: url("/img/icons/cross.svg");
+  background-image: url("../img/icons/cross.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -553,7 +553,7 @@ p {
   flex-direction: column;
   row-gap: 24px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .tabs {
     row-gap: 32px;
   }
@@ -586,7 +586,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .article {
     gap: 48px;
   }
@@ -607,7 +607,7 @@ p {
     height: 106px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .article__wrapper {
     height: 160px;
   }
@@ -622,7 +622,7 @@ p {
 .article__show-toggle {
   margin-top: 16px;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .article__show-toggle {
     margin-top: 10px;
   }
@@ -649,11 +649,44 @@ p {
 }
 
 .show-toggle {
-  display: flex;
+  color: inherit;
+  display: inline-flex;
   -moz-column-gap: 8px;
        column-gap: 8px;
-  align-items: center;
-  height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  position: relative;
+}
+.show-toggle, .show-toggle:hover {
+  text-decoration: none;
+}
+@media (hover: hover) {
+  .show-toggle:hover {
+    cursor: pointer;
+  }
+  .show-toggle:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .show-toggle:active {
+    cursor: pointer;
+  }
+  .show-toggle:active::after {
+    width: 100%;
+  }
+}
+.show-toggle::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50%;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition-duration: 0.2s;
 }
 .show-toggle__arrow {
   width: 24px;
@@ -666,53 +699,13 @@ p {
 .show-toggle__arrow--active {
   transform: rotate(-180deg);
 }
-.show-toggle__action {
-  color: inherit;
-  display: flex;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  position: relative;
-}
-.show-toggle__action, .show-toggle__action:hover {
-  text-decoration: none;
-}
-@media (hover: hover) {
-  .show-toggle__action:hover {
-    cursor: pointer;
-  }
-  .show-toggle__action:hover::after {
-    width: 100%;
-  }
-}
-@media (hover: none) {
-  .show-toggle__action:active {
-    cursor: pointer;
-  }
-  .show-toggle__action:active::after {
-    width: 100%;
-  }
-}
-.show-toggle__action::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  translate: -50%;
-  width: 0;
-  height: 2px;
-  background-color: currentColor;
-  transition-duration: 0.2s;
-}
 .show-toggle--icon-arrow {
-  background-image: url("/img/icons/arrow.svg");
+  background-image: url("../img/icons/arrow.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.tab-button {
+.tab__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -727,20 +720,20 @@ p {
   padding: 8px 10px 8px 16px;
 }
 @media (hover: hover) {
-  .tab-button:hover {
+  .tab__button:hover {
     cursor: pointer;
     background-color: var(--color-white);
     border: 2px solid var(--color-ligthturquoise);
   }
 }
 @media (hover: none) {
-  .tab-button:active {
+  .tab__button:active {
     cursor: pointer;
     background-color: var(--color-white);
     border: 2px solid var(--color-ligthturquoise);
   }
 }
-.tab-button[aria-selected=true] {
+.tab__button[aria-selected=true] {
   background-color: var(--color-white);
   border: 2px solid var(--color-ligthturquoise);
 }
@@ -783,11 +776,6 @@ p {
 @media screen and (min-width: 1024px) {
   .label-button__text {
     display: block;
-  }
-}
-@media screen and (max-width: 1023px) {
-  .label-button__aria {
-    display: none;
   }
 }
 @media (hover: hover) {
