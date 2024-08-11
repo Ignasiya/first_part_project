@@ -4,6 +4,8 @@
 
 ## [Задание 1.4](https://ignasiya.github.io/first_part_project/sidebar.html)
 
+## [Задание 1.5](https://ignasiya.github.io/first_part_project/slider.html)
+
 ### Сверстать блок из макета, выложить на Github и Github pages.
 
 - Для верстки использовать flexbox.
