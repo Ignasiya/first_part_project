@@ -2,27 +2,55 @@ const elBtnOpenSidebar = document.querySelector("#openSidebar");
 const elBtnCloseSidebar = document.querySelector("#closeSidebar");
 const elSidebar = document.querySelector("#sidebarOverlay");
 const elShadingBackground = document.querySelector("#shadingBackground");
+const elsNavigateShowToggle = document.querySelectorAll(
+  ".page-navigate__show-toggle"
+);
 
-elBtnOpenSidebar.addEventListener("click", () => {
+elBtnOpenSidebar?.addEventListener("click", () => {
   elSidebar.classList.toggle("sidebar--show");
   elShadingBackground.classList.toggle("shading-background--show");
 });
 
-elBtnCloseSidebar.addEventListener("click", () => {
+elBtnCloseSidebar?.addEventListener("click", () => {
   elSidebar.classList.toggle("sidebar--show");
   elShadingBackground.classList.toggle("shading-background--show");
 });
 
-// elBtnOpenSidebar.addEventListener("keydown", (event) => {
-//   if (event.key === " " || event.key === "Enter") {
-//     event.preventDefault();
-//     elBtnOpenSidebar.click();
-//   }
-// });
+elsNavigateShowToggle?.forEach((el) => {
+  el.addEventListener("click", () => {
+    el.classList.toggle("show-toggle--active");
+    el.previousElementSibling.classList.toggle("page-navigate__list--show-all");
 
-// elBtnCloseSidebar.addEventListener("keydown", (event) => {
-//   if (event.key === " " || event.key === "Enter") {
-//     event.preventDefault();
-//     elBtnCloseSidebar.click();
-//   }
-// });
+    if (el.classList.contains("show-toggle--active")) {
+      el.lastElementChild.textContent = "Скрыть";
+    } else {
+      el.lastElementChild.textContent = "Показать все";
+    }
+  });
+});
+
+let mySwiper;
+
+function initSwiper() {
+  if (window.innerWidth < 768) {
+    if (!mySwiper) {
+      mySwiper = new Swiper(".mySwiper", {
+        spaceBetween: 24,
+        width: 272,
+        height: 280,
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+      });
+    }
+  } else {
+    if (mySwiper) {
+      mySwiper.destroy(true, true);
+      mySwiper = null;
+    }
+  }
+}
+
+window.addEventListener("resize", initSwiper);
+initSwiper();
