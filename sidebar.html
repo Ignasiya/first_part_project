@@ -18,124 +18,93 @@
   </head>
   <body>
     <aside class="sidebar" id="sidebarOverlay">
-      <div class="sidebar__header container">
-        <div class="page-menu">
-          <button
-            type="button"
-            class="page-menu__button hidden-desktop circle-button circle-button--icon-cross"
-            id="closeSidebar"
-          >
-            <span class="visually-hidden">Закрыть меню</span>
-          </button>
-          <a
-            class="page-menu__logo logo"
-            href="https://ignasiya.github.io/first_part_project/"
-          >
-            <img
-              src="img/logo.svg"
-              alt="CPS - компания по ремонту техники Dell"
-              width="96"
-              height="50"
-              loading="lazy"
-            />
-          </a>
-          <button
-            type="button"
-            class="page-menu__button page-menu--margin-left circle-button circle-button--icon-glass-alt"
-          >
-            <span class="visually-hidden">Поиск</span>
-          </button>
-        </div>
-      </div>
-      <div class="sidebar__body">
-        <nav class="navigate">
-          <ul class="navigate__list">
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Ремонт техники</a>
-            </li>
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Услуги и сервисы</a>
-            </li>
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Корпоративным клиентам</a>
-            </li>
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Продавцам техники</a>
-            </li>
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Партнерам</a>
-            </li>
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Производителям</a>
-            </li>
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Наши сервисные центры</a>
-            </li>
-            <li class="navigate__item">
-              <a class="navigate__link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="sidebar__footer container">
-        <ul class="page-menu">
-          <li class="page-menu__item">
-            <button
-              type="button"
-              class="circle-button circle-button--icon-phone"
-            >
+      <header class="sidebar__header container">
+        <button
+          class="menu__button hidden-desktop circle-button circle-button--icon-cross"
+          id="closeSidebar"
+        >
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+        <a
+          class="menu__logo logo"
+          href="https://ignasiya.github.io/first_part_project/"
+        >
+          <img
+            src="img/logo.svg"
+            alt="CPS - компания по ремонту техники Dell"
+            width="96"
+            height="50"
+            loading="lazy"
+          />
+        </a>
+        <button
+          class="menu__button menu--margin-left circle-button circle-button--icon-glass-alt"
+        >
+          <span class="visually-hidden">Поиск</span>
+        </button>
+      </header>
+      <nav class="navigate">
+        <ul class="navigate__list">
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Ремонт техники</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Услуги и сервисы</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Продавцам техники</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Партнерам</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Производителям</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Наши сервисные центры</a>
+          </li>
+          <li class="navigate__item">
+            <a class="navigate__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <footer class="sidebar__footer container">
+        <ul class="menu">
+          <li class="menu__item">
+            <button class="circle-button circle-button--icon-phone">
               <span class="visually-hidden">Позвоните нам</span>
             </button>
           </li>
-          <li class="page-menu__item">
-            <button
-              type="button"
-              class="circle-button circle-button--icon-messege"
-            >
+          <li class="menu__item">
+            <button class="circle-button circle-button--icon-messege">
               <span class="visually-hidden">Напишите нам</span>
             </button>
           </li>
-          <li class="page-menu__item">
-            <button
-              type="button"
-              class="circle-button circle-button--icon-group"
-            >
+          <li class="menu__item">
+            <button class="circle-button circle-button--icon-group">
               <span class="visually-hidden">Контакты</span>
             </button>
           </li>
         </ul>
-        <div class="sidebar__contacts contacts">
-          <div class="contacts__item">
-            <a class="contacts__mail" href="mailto:mail@cps.com"
-              >mail@cps.com</a
-            >
-          </div>
-          <div class="contacts__item">
-            <a class="contacts__phone" href="tel:+78008908900"
-              >8 800 890 8900</a
-            >
-          </div>
-        </div>
-        <div class="sidebar__languages languages">
-          <ul class="languages__list">
-            <li class="languages__item">
-              <button type="button" class="languages__btn" id="languageRu">
-                RU
-              </button>
-            </li>
-            <li class="language__item">
-              <button type="button" class="languages__btn" id="languageEn">
-                EN
-              </button>
-            </li>
-            <li class="language__item">
-              <button type="button" class="languages__btn" id="languageCh">
-                CH
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <address class="sidebar__contacts contacts">
+          <a class="contacts__mail" href="mailto:mail@cps.com">mail@cps.com</a>
+          <a class="contacts__phone" href="tel:+78008908900">8 800 890 8900</a>
+        </address>
+        <ul class="languages__list">
+          <li class="languages__item">
+            <button class="languages__btn" id="languageRu">RU</button>
+          </li>
+          <li class="language__item">
+            <button class="languages__btn" id="languageEn">EN</button>
+          </li>
+          <li class="language__item">
+            <button class="languages__btn" id="languageCh">CH</button>
+          </li>
+        </ul>
+      </footer>
     </aside>
 
     <div id="shadingBackground" class="shading-background"></div>
@@ -144,10 +113,9 @@
       <header class="header">
         <div class="header__inner container">
           <div class="header__menu hidden-desktop">
-            <div class="page-menu">
-              <div class="page-menu page-menu--isborder-tablet">
+            <div class="menu">
+              <div class="menu menu--isborder-tablet">
                 <button
-                  type="button"
                   class="header__button circle-button circle-button--icon-burger"
                   id="openSidebar"
                 >
