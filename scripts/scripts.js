@@ -18,8 +18,9 @@ elBtnCloseSidebar?.addEventListener("click", () => {
 
 elsNavigateShowToggle?.forEach((el) => {
   el.addEventListener("click", () => {
+    const elList = el.previousElementSibling;
     el.classList.toggle("show-toggle--active");
-    el.previousElementSibling.classList.toggle("page-navigate__list--show-all");
+    elList.classList.toggle("page-navigate__list--show-all");
 
     if (el.classList.contains("show-toggle--active")) {
       el.lastElementChild.textContent = "Скрыть";
