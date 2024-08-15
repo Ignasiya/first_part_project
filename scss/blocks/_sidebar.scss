@@ -53,4 +53,10 @@
       margin-top: 24px;
     }
   }
+
+  &__button {
+    &--margin-left {
+      margin-left: auto;
+    }
+  }
 }

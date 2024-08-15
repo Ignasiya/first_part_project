@@ -501,6 +501,9 @@ p {
     margin-top: 24px;
   }
 }
+.sidebar__button--margin-left {
+  margin-left: auto;
+}
 
 .navigate__list {
   display: flex;
