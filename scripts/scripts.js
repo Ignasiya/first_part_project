@@ -2,9 +2,7 @@ const elBtnOpenSidebar = document.querySelector("#openSidebar");
 const elBtnCloseSidebar = document.querySelector("#closeSidebar");
 const elSidebar = document.querySelector("#sidebarOverlay");
 const elShadingBackground = document.querySelector("#shadingBackground");
-const elsNavigateShowToggle = document.querySelectorAll(
-  ".page-navigate__show-toggle"
-);
+const elsNavigateShowToggle = document.querySelectorAll(".navbar__show-toggle");
 
 elBtnOpenSidebar?.addEventListener("click", () => {
   elSidebar.classList.toggle("sidebar--show");
@@ -20,7 +18,7 @@ elsNavigateShowToggle?.forEach((el) => {
   el.addEventListener("click", () => {
     const elList = el.previousElementSibling;
     el.classList.toggle("show-toggle--active");
-    elList.classList.toggle("page-navigate__list--show-all");
+    elList.classList.toggle("navbar__list--show-all");
 
     if (el.classList.contains("show-toggle--active")) {
       el.lastElementChild.textContent = "Скрыть";
